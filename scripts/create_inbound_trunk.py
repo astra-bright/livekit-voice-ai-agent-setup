@@ -138,13 +138,13 @@ def main():
         livekit_api_secret
     )
 
-    # if inbound_trunk_sid:
-    #     create_dispatch_rule(
-    #         inbound_trunk_sid,
-    #         livekit_url,
-    #         livekit_api_key,
-    #         livekit_api_secret
-    #     )
+    if inbound_trunk_sid:
+        create_dispatch_rule(
+            inbound_trunk_sid,
+            livekit_url,
+            livekit_api_key,
+            livekit_api_secret
+        )
 
 
 if __name__ == "__main__":
