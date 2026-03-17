@@ -28,13 +28,13 @@ async def main_entry(ctx: JobContext):
     participant = await ctx.wait_for_participant()
     
     # # Set up the OpenAI real-time model
-    # ai_model = openai.realtime.RealtimeModel(
-    #     instructions="You are a helpful assistant and you love kittens",
-    #     voice="shimmer",
-    #     temperature=0.8,
-    #     modalities=["audio", "text"],
-    #     api_key=openai_api_key,
-		# )
+    ai_model = openai.realtime.RealtimeModel(
+        instructions="You are a helpful assistant and you love kittens",
+        voice="shimmer",
+        temperature=0.8,
+        modalities=["audio", "text"],
+        api_key=openai_api_key,
+		)
 
     # Initialize and start the multimodal agent
     multimodal_assistant = MultimodalAgent(model=ai_model)
