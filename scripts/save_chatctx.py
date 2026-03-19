@@ -59,12 +59,12 @@ class AssistantFnc(llm.FunctionContext):
             or agent.chat_ctx.messages[-1].role != "assistant"
         ):
             # skip if assistant already said something
-            filler_messages = [
-                "Let me check the weather in {location} for you.",
-                "Let me see what the weather is like in {location} right now.",
-                # LLM will complete this sentence if it is added to the end of the chat context
-                "The current weather in {location} is ",
-            ]
+            # filler_messages = [
+            #     "Let me check the weather in {location} for you.",
+            #     "Let me see what the weather is like in {location} right now.",
+            #     # LLM will complete this sentence if it is added to the end of the chat context
+            #     "The current weather in {location} is ",
+            # ]
             message = random.choice(filler_messages).format(location=location)
             logger.info(f"saying filler message: {message}")
 
